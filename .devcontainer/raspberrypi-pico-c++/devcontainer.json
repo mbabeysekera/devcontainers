@@ -1,0 +1,26 @@
+{
+    "name": "Raspberry Pi Pico C++ - Devcontainer",
+    "remoteUser": "root",
+    // "workspaceMount": "source=${localWorkspaceFolder}/sub-folder,target=/workspace,type=bind,consistency=cached", 
+    "workspaceFolder": "/workspace",
+    "build": {
+        "args": {
+            "IMAGE_VERSION": "ubuntu-24.04"
+        },
+        "dockerfile": "./Dockerfile"
+    },
+    "features": {
+        "ghcr.io/devcontainers/features/git:1": {
+            "version": "latest"
+        }
+    },
+    "customizations": {
+        "vscode": {
+            "settings": {},
+            "extensions": [
+                "ms-vscode.cpptools-themes",
+                "raspberry-pi.raspberry-pi-pico"
+            ]
+        }
+    }
+}
